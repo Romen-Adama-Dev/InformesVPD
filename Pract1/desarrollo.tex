@@ -1,0 +1,56 @@
+% ------------------------------------------------------------------------------
+% Virtualizacion y Procesamiento Distribuido
+% by Romen Adama Caetano Ramirez
+% University of Las Palmas de Gran Canaria 
+% Chapter Desarrollo
+% ------------------------------------------------------------------------------
+\chapter{Desarrollo de la practica} % enter the name of the chapter here
+
+\section{Práctica 1 (Parte B)}
+\subsection{Creación y configuración de	 una máquina virtual }
+El primer objetivo de esta actividad es realizar la instalación de la plataforma de virtualización KVM, que será el hipervisor que emplearemos para la creación de toda la infraestructura virtual necesaria para desarrollar las prácticas de la asignatura.
+
+El segundo objetivo de esta actividad es probar la infraestructura instalada mediante la creación e instalación de máquinas virtuales con la plataforma de administración de KVM
+Así mismo aprenderemos a configurar los servicios. Con ello avanzaremos en la creación de la infraestructura virtual necesaria para desarrollar las prácticas de la asignatura.
+
+\item \verb|Code|
+    \begin{verbatim}
+    # Este comando instala el paquete nfs-utils,
+    # que es necesario para montar una imagen NFS en CentOS.
+    sudo yum install nfs-utils
+    
+    # Este comando crea un directorio llamado nfs_image en el directorio
+    # /mnt/. Este directorio será el punto de montaje para la imagen NFS.
+    sudo mkdir /mnt/nfs_image
+    
+    # Este comando monta la imagen NFS en el servidor con la dirección IP
+    # 10.22.146.215 y el directorio /imagenes/centos/7/isos/x86_64
+    # en el directorio local /mnt/nfs_image.
+    sudo mount 10.22.146.215:/imagenes/centos/7/isos/x86_64 /mnt/nfs_image 
+    
+    # Este comando muestra el uso de almacenamiento del sistema de archivos
+    # en un formato legible para humanos.
+    df -h
+    
+    # Este comando instala la utilidad virt-manager, que es una herramienta
+    # gráfica para la creación y administración de máquinas virtuales en CentOS.
+    sudo yum install virt-manager 
+    
+    # Este comando inicia la aplicación virt-manager.
+    virt-manager
+    
+    # Este comando reinicia el sistema.
+    reboot
+    
+    # Este comando vuelve a iniciar la aplicación virt-manager después del reinicio del sistema.
+    virt-manager
+    
+    # Este comando muestra el historial de comandos recientemente ejecutados en la terminal.
+    history
+    
+    # Para el apartado "Algunas consideraciones adicionales",
+    # lo hice mirando el apartado de la "bombilla" y ahi indague las cuestiones.
+
+    # Levantamos tarjeta de red
+    sudo ifup eth0
+    \end{verbatim}

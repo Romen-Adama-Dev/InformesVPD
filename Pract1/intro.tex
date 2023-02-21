@@ -1,0 +1,52 @@
+% ------------------------------------------------------------------------------
+% Virtualizacion y Procesamiento Distribuido
+% by Romen Adama Caetano Ramirez
+% University of Las Palmas de Gran Canaria 
+% Chapter Introduccion
+% ------------------------------------------------------------------------------
+\chapter{Introduccion} % enter the name of the chapter here
+
+\section{Resumen} % enter the name of the section here
+
+\subsection*{Creación y configuración de una máquina virtual}
+Esta actividad tiene dos objetivos principales: instalar la plataforma de virtualización KVM y crear máquinas virtuales utilizando esta plataforma. 
+Para lograr esto, se recomienda consultar dos fuentes bibliográficas de Red Hat: la Guía de Inicio para la Virtualización, que proporciona información básica sobre virtualización y los componentes principales de la plataforma de virtualización de Red Hat.
+
+Ademas se recomienda consultar la Guía de Implementación y Administración de la Virtualización, que describe la instalación de la plataforma de virtualización Red Hat en un sistema anfitrión Linux Red Hat Enterprise, la instalación de máquinas virtuales, y la administración del sistema anfitrión y las máquinas virtuales utilizando diferentes recursos de la plataforma de virtualización de Red Hat. La segunda fuente es la base de esta guía.
+
+
+\section{Parámetros	de	la	máquina	virtual} % enter the name of the section here
+
+Para la creación de máquina virtual vamos a usar la utilidad virt-manager. En ella elegimos crear una nueva máquina virtual. A continuación hay que proporcionar los siguientes parámetros. 
+
+\begin{enumerate}
+    \item Nombre de la máquina virtual y medio de instalación del S.O. 
+    \item Sistema operativo a instalar en la máquina virtual 
+    \item Cantidad de memoria (1GB) y número de procesadores (1)
+    \item Características del disco de la máquina virtual: tamaño, estático o dinámico y ubicación del archivo en el anfitrión que lo simula (5 GB dinámico). 
+    \item Especificación de características avanzadas de la máquina virtual: Interfaz de red, MAC, tipo de virtualización y arquitectura del procesador (1 interfaz de red en modo NAT). 
+    \item Paso final: pantalla que indica el avance en la ejecución de la orden de creación de la máquina virtual especificada.
+\end{enumerate}
+
+
+\section{Algunas consideraciones adicionales}
+\begin{enumerate}
+    \item Con	 la	 utilidad	 virt-manager se	 pueden	 consultar	 las	 características	
+hardware	 de	 la	 máquina	 virtual.	 Comprobar	 que	 se	 corresponde	 las	
+características	mostradas	con	las	suministradas.
+    \item Observar	 que	 se	 puede	 modificar	 el	 hardware,	 modificando	 las	
+características	del	hardware	que	tiene	o	añadiendo	hardware	virtual.
+    \item Averiguar	a	qué	red	está	conectada	la	máquina	virtual.
+    \item Comprobar que	hay	conectividad	entre	la	máquina	virtual	y	el	anfitrión.
+    \item Comprobar que	hay	conectividad	entre	la	máquina	virtual	y	el	exterior.
+\end{enumerate}
+
+
+\section{Objetivos}
+El objetivo final de esta práctica es aprender a instalar y utilizar la plataforma de virtualización KVM para crear y administrar máquinas virtuales en un sistema anfitrión Linux Red Hat Enterprise. 
+
+Se debe seguir una serie de pasos para instalar KVM y crear una máquina virtual con los parámetros necesarios, incluyendo la elección del sistema operativo, la cantidad de memoria y procesadores, el tamaño y tipo de disco, y las características avanzadas de la máquina virtual como la interfaz de red y la arquitectura del procesador. 
+
+También se deben realizar algunas comprobaciones adicionales, como verificar las características de hardware de la máquina virtual y la conectividad con el anfitrión y el exterior. 
+
+En resumen, la práctica tiene como objetivo proporcionar una comprensión práctica de la virtualización y la administración de máquinas virtuales utilizando la plataforma KVM.
